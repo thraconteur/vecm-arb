@@ -95,22 +95,17 @@ vecm-arb/
 ├── engine/
 │   ├── alpha_engine.py            # Johansen test, VECM fit, spread, z-score
 │   └── cointegration_monitor.py   # rolling rank check, breakdown protocol
-├── pipeline/
-│   └── data_pipeline.py           # Redis broker, feed microservices, buffer
-├── risk/
-│   └── risk_engine.py             # CVXPY convex re-hedging (halts / HTB)
-├── backtest/
-│   └── backtester.py              # fees + borrow + sqrt market impact
-├── data/
-│   └── data_sources.py            # synthetic VECM generator + live API stubs
-├── tests/
-│   └── test_pipeline.py           # ground-truth recovery + integration tests
+├── data_pipeline.py               # Redis broker, feed microservices, buffer
+├── risk_engine.py                 # CVXPY convex re-hedging (halts / HTB)
+├── backtester.py                  # fees + borrow + sqrt market impact
+├── data_sources.py                # synthetic VECM generator + live API stubs
+├── test_pipeline.py               # ground-truth recovery + integration tests
 ├── outputs/
 │   ├── tear_sheet.png
 │   ├── capacity_analysis.csv
 │   └── cointegration_monitor_log.csv
 ├── run_demo.py                    # end-to-end orchestration script
-└── requirements.txt
+
 ```
 
 ---
